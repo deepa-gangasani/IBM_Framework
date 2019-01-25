@@ -2,13 +2,15 @@ package com.Testcases;
 
 import org.testng.annotations.Test;
 
-import com.training.pom.LoginPOM;
+import com.training.pom.PasswordResetPOM;
 import com.training.utility.DriverFactory;
 import com.training.utility.DriverNames;
 
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
+
+import static org.testng.Assert.assertEquals;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -22,7 +24,7 @@ import org.testng.annotations.AfterTest;
 public class ELTC_012 {
 	private WebDriver driver;
 	private String baseUrl;
-	private LoginPOM loginPOM;
+	private PasswordResetPOM PasswordResetPOM;
 	private static Properties properties;
 	
 	@BeforeClass
@@ -37,7 +39,7 @@ public class ELTC_012 {
   @BeforeMethod
   public void setUp() throws Exception {
 		driver = DriverFactory.getDriver(DriverNames.CHROME);
-		loginPOM = new LoginPOM(driver); 
+		PasswordResetPOM = new PasswordResetPOM(driver); 
 		baseUrl = properties.getProperty("baseURL");
 		//screenShot = new ScreenShot(driver); 
 		// open the browser 
@@ -52,13 +54,13 @@ public class ELTC_012 {
   @Test
   public void pswdrecoverTest() {
 		
-		loginPOM.clicklostpassowrd(); 
-		loginPOM.sendentermailid("Eaglecomp@001");
-		String expected= "Your new profile has been saved";
-		String actual = PwsdchangePOM.pswdreset();
+	  PasswordResetPOM.clickLostmypassword(); 
+	  PasswordResetPOM.sendEntermailid("deepabl333@gmail.com");
+	  PasswordResetPOM.clickSendmessage();
+		String expected= "Password sent to your mail id";
+		String actual =PasswordResetPOM.alertnewprofile();
 		System.out.println(actual);
-		assertequals(actual, expected);
-		
+		assertEquals(actual, expected);
 		
 		//insert assert step here
   }
