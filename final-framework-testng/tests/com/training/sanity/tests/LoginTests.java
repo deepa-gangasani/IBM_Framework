@@ -20,6 +20,7 @@ public class LoginTests {
 	private WebDriver driver;
 	private String baseUrl;
 	private LoginPOM loginPOM;
+	
 	private static Properties properties;
 	private ScreenShot screenShot;
 
@@ -50,6 +51,8 @@ public class LoginTests {
 		loginPOM.sendUserName("admin");
 		loginPOM.sendPassword("admin@123");
 		loginPOM.clickLoginBtn(); 
+		//insert assert step here
+		
 		screenShot.captureScreenShot("First");
 	}
 }
