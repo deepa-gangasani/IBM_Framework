@@ -58,14 +58,14 @@ public class ELTC_011
   @Test
   public void PswdchangeTest() {
 	  
-	  PwsdchangePOM.sendUserName("Deepa");
-	  PwsdchangePOM.sendPassword("Eaglecomp@005");
+	  PwsdchangePOM.sendUserName("DeepaStu10");
+	  PwsdchangePOM.sendPassword("Eaglecomp@001");
 	  PwsdchangePOM.clickLoginBtn(); 
 	  PwsdchangePOM.clichomebtn();
 	  PwsdchangePOM.cliceditprofile();
-	  PwsdchangePOM.sendpass("Eaglecomp@005");
-	  PwsdchangePOM.sendnewpassword("Eaglecomp@006");
-	  PwsdchangePOM.sendcnfrmpassword("Eaglecomp@006");
+	  PwsdchangePOM.sendpass("Eaglecomp@001");
+	  PwsdchangePOM.sendnewpassword("Eaglecomp@002");
+	  PwsdchangePOM.sendcnfrmpassword("Eaglecomp@002");
 	  PwsdchangePOM.clicksavechangesbtn(); 
 		String expected= "Your new profile has been saved";
 		String actual = PwsdchangePOM.pswdreset();

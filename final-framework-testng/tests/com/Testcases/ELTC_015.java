@@ -48,8 +48,8 @@ public class ELTC_015 {
   @Test
   public void validLogoutTest() throws InterruptedException {
 		
-	  LogoutPOM.sendUserName("Deepa");
-	  LogoutPOM.sendPassword("Eaglecomp@006");
+	  LogoutPOM.sendUserName("DeepaStu11");
+	  LogoutPOM.sendPassword("Eaglecomp@001");
 	  LogoutPOM.clickLoginBtn(); 
 	  LogoutPOM.clickdropdown();
 		Thread.sleep(5000);

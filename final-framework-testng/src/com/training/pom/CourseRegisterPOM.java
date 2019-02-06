@@ -14,7 +14,6 @@ private WebDriver driver;
 		PageFactory.initElements(driver, this);
 	}
 	
-	
 	@FindBy(id="login")
 	private WebElement userName; 
 	
@@ -38,15 +37,12 @@ private WebDriver driver;
 	private WebElement submitcourse;
 	
 		
-	@FindBy(xpath="//div[@class='row']//div[4]//div[1]//div[2]//div[4]//div[2]//div[1]//a[1]")
+	@FindBy(xpath="//div[@class='row']//div[8]//div[1]//div[2]//div[4]//div[2]//div[1]//a[1]")
 	private WebElement subscribe;
 	
 	@FindBy(xpath="//div[@class='alert alert-info']")
 	private WebElement alertnewprofile;
 	
-	
-	
-		
 	public String regcnfrmation()
 	{
 	 String alertmsg= alertnewprofile.getText();
@@ -85,13 +81,9 @@ private WebDriver driver;
 		public void clicksubmitcourse() {
 			this.submitcourse.click(); 
 		}
-		
-		
+
 		public void clicksubscribe() {
 			this.subscribe.click(); 
 		}
-		
-		
-		
-			
+
 		}

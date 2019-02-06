@@ -3,14 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.Testcases.ELTC_012">
+      <class name="com.training.regression.tests.LoginExcelTest">
         <methods>
           <include name="tearDown"/>
-          <include name="pswdrecoverTest"/>
+          <include name="loginDBTest"/>
           <include name="setUpBeforeClass"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- com.Testcases.ELTC_012 -->
+      </class> <!-- com.training.regression.tests.LoginExcelTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

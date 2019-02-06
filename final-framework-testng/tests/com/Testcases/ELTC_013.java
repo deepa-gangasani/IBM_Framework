@@ -53,15 +53,15 @@ public class ELTC_013 {
   @Test
   public void subscribecrc() {
 		
-	  CourseRegisterPOM.sendUserName("Deepa");
-	  CourseRegisterPOM.sendPassword("Eaglecomp@006");
+	  CourseRegisterPOM.sendUserName("DeepaStu11");
+	  CourseRegisterPOM.sendPassword("Eaglecomp@001");
 	  CourseRegisterPOM.clickLoginBtn(); 
 	  CourseRegisterPOM.clickMycourses();
 	  CourseRegisterPOM.clickCoursecatalog();
 	  CourseRegisterPOM.sendSearchcourse("Selenium");
 	  
 	  CourseRegisterPOM.clicksubscribe();
-		String expected= "You have been registered to course:";
+		String expected= "You have been registered to course: Selenium_Basics";
 		String actual =CourseRegisterPOM .regcnfrmation();
 		System.out.println(actual);
 		assertEquals(actual, expected);

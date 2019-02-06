@@ -14,7 +14,6 @@ public class LogoutPOM {
 		PageFactory.initElements(driver, this);
 	}
 	
-	
 	@FindBy(id="login")
 	private WebElement userName; 
 	
