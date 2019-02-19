@@ -7,6 +7,8 @@ import com.training.pom.ELTC_042_TakeAssessmentPOM;
 import com.training.pom.ELTC_071_AuthorATestPOM;
 import com.training.utility.DriverFactory;
 import com.training.utility.DriverNames;
+import com.training.pom.ELTC_041_StudentAttemptTestPOM;
+
 
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.AfterMethod;
@@ -27,6 +29,7 @@ public class ELTC_071_AuthorATest {
 	private String baseUrl;
 	private ELTC_042_TakeAssessmentPOM ELTC_042_TakeAssessmentPOM;
 	private ELTC_071_AuthorATestPOM ELTC_071_AuthorATestPOM;
+	private ELTC_041_StudentAttemptTestPOM ELTC_041_StudentAttemptTestPOM;
 	private static Properties properties;
 	
 	@BeforeClass
@@ -54,13 +57,23 @@ public class ELTC_071_AuthorATest {
 		driver.quit();
   }
   @Test(priority=1)
-  public void coursecatalog() {
+  public void coursecatalog() throws InterruptedException {
 		
-	  ELTC_042_TakeAssessmentPOM.sendUserName("Deepastu3");
+	  ELTC_042_TakeAssessmentPOM.sendUserName("Deepatec1");
 	  ELTC_042_TakeAssessmentPOM.sendPassword("Eaglecomp@001");
 	  ELTC_042_TakeAssessmentPOM.clickLoginBtn(); 
-	  ELTC_071_AuthorATestPOM.clicktesticon();
+	 // ELTC_071_AuthorATestPOM.clickcourses();
+	//  Thread.sleep(3000);
+	  ELTC_041_StudentAttemptTestPOM.clickMycourses();
+	  ELTC_041_StudentAttemptTestPOM.clicksubscribedcrc();
+	  ELTC_041_StudentAttemptTestPOM.clicktesticon();
+	 // ELTC_071_AuthorATestPOM.clickSubscribedcourse();
+	 // ELTC_071_AuthorATestPOM.clicktesticon();
 	  ELTC_071_AuthorATestPOM.clickcreatetest();
+	  ELTC_071_AuthorATestPOM.clickAdvancedSettings();
+	  ELTC_071_AuthorATestPOM.richtextbox("quiz");
+	  
+	  
 	  
   }
 	 
@@ -77,7 +90,7 @@ public class ELTC_071_AuthorATest {
 	 
   }
   
-  @Test(priority=2)
+  /*@Test(priority=2)
   
   public void testdetails()
   {
@@ -106,7 +119,7 @@ public class ELTC_071_AuthorATest {
 	ELTC_042_TakeAssessmentPOM.detailedresults();
 		
   }	
-	
+	*/
   }
 
 

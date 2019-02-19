@@ -1,33 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="1" total="4" passed="3">
+<testng-results skipped="0" failed="1" ignored="0" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="30944" started-at="2019-02-08T04:55:40Z" finished-at="2019-02-08T04:56:10Z">
+  <suite name="Default suite" duration-ms="20628" started-at="2019-02-19T09:09:58Z" finished-at="2019-02-19T09:10:19Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="30944" started-at="2019-02-08T04:55:40Z" finished-at="2019-02-08T04:56:10Z">
-      <class name="com.Testcases.ELTC_043_Assignments">
-        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.Testcases.ELTC_043_Assignments@42d80b78]" name="setUpBeforeClass" is-config="true" duration-ms="12" started-at="2019-02-08T04:55:40Z" finished-at="2019-02-08T04:55:40Z">
+    <test name="Default test" duration-ms="20628" started-at="2019-02-19T09:09:58Z" finished-at="2019-02-19T09:10:19Z">
+      <class name="com.Testcases.ELTC_072_AllowsAdmintoaddMultiplenewusers">
+        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.Testcases.ELTC_072_AllowsAdmintoaddMultiplenewusers@3bfdc050]" name="setUpBeforeClass" is-config="true" duration-ms="10" started-at="2019-02-19T09:09:58Z" finished-at="2019-02-19T09:09:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBeforeClass -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.Testcases.ELTC_043_Assignments@42d80b78]" name="setUp" duration-ms="9922" started-at="2019-02-08T04:55:40Z" finished-at="2019-02-08T04:55:50Z">
+        <test-method status="PASS" signature="BrowserLaunchTest()[pri:0, instance:com.Testcases.ELTC_072_AllowsAdmintoaddMultiplenewusers@3bfdc050]" name="BrowserLaunchTest" duration-ms="19818" started-at="2019-02-19T09:09:58Z" finished-at="2019-02-19T09:10:18Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="coursecatalog()[pri:1, instance:com.Testcases.ELTC_043_Assignments@42d80b78]" name="coursecatalog" duration-ms="6269" started-at="2019-02-08T04:55:50Z" finished-at="2019-02-08T04:55:56Z">
+        </test-method> <!-- BrowserLaunchTest -->
+        <test-method status="FAIL" signature="EnterUserCredntialsTogetRegistered(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.Testcases.ELTC_072_AllowsAdmintoaddMultiplenewusers@3bfdc050]" name="EnterUserCredntialsTogetRegistered" duration-ms="0" started-at="2019-02-19T09:10:18Z" data-provider="Testdata_TC_72" finished-at="2019-02-19T09:10:18Z">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Method public void com.Testcases.ELTC_072_AllowsAdmintoaddMultiplenewusers.EnterUserCredntialsTogetRegistered(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.lang.InterruptedException requires a @DataProvider named : Testdata_TC_72 in class com.training.dataproviders.RegistrationDataProviders]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Method public void com.Testcases.ELTC_072_AllowsAdmintoaddMultiplenewusers.EnterUserCredntialsTogetRegistered(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.lang.InterruptedException requires a @DataProvider named : Testdata_TC_72 in class com.training.dataproviders.RegistrationDataProviders
+at org.testng.internal.Parameters.findDataProvider(Parameters.java:513)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:691)
+at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:49)
+at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:37)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:923)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- coursecatalog -->
-        <test-method status="PASS" signature="assignmentdetails()[pri:2, instance:com.Testcases.ELTC_043_Assignments@42d80b78]" name="assignmentdetails" duration-ms="12900" started-at="2019-02-08T04:55:56Z" finished-at="2019-02-08T04:56:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- assignmentdetails -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.Testcases.ELTC_043_Assignments@42d80b78]" name="tearDown" is-config="true" duration-ms="1771" started-at="2019-02-08T04:56:09Z" finished-at="2019-02-08T04:56:10Z">
+        </test-method> <!-- EnterUserCredntialsTogetRegistered -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.Testcases.ELTC_072_AllowsAdmintoaddMultiplenewusers@3bfdc050]" name="tearDown" is-config="true" duration-ms="767" started-at="2019-02-19T09:10:18Z" finished-at="2019-02-19T09:10:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.Testcases.ELTC_043_Assignments -->
+      </class> <!-- com.Testcases.ELTC_072_AllowsAdmintoaddMultiplenewusers -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

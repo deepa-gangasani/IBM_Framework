@@ -19,7 +19,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
  *      access.
  */
 public class ApachePOIExcelRead {
-	public  String [][] getExcelContent(String fileName) {
+	public  String [][] getExcelContent(String fileName,String sheetName) {//passing file name and sheet name of excel sheet
 		int rowCount =0; 
 		String [][] list1 = null; 
 		
@@ -31,8 +31,9 @@ public class ApachePOIExcelRead {
 			XSSFWorkbook workbook = new XSSFWorkbook(file);
 
 			// Get first/desired sheet from the workbook
-			XSSFSheet sheet = workbook.getSheetAt(0);
-			
+			//XSSFSheet sheet = workbook.getSheet("TC_80");//Changed sheet name or sheet number//<satya>//everytime chnage as here 2nd sheet so given 1
+			XSSFSheet sheet = workbook.getSheet(sheetName);
+			//XSSFSheet sheet = workbook.getSheetAt(1);
 			int rowTotal = sheet.getLastRowNum();
 
 			if ((rowTotal > 0) || (sheet.getPhysicalNumberOfRows() > 0)) {
@@ -88,8 +89,10 @@ public class ApachePOIExcelRead {
 		return list1;
 	}
 
-	public static void main(String[] args) {
-		String fileName = "C:\\Users\\DeepaG\\Desktop\\Selenium_Training\\Excelfiles\\loginDetails.xlsx";
+	/*public static void main(String[] args) {
+		//String fileName = "C:/Users/Naveen/Desktop/Testing.xlsx";//Chnage everytime <path Satya>// as per sheet kept
+	//String fileName ="C:\\Users\\SatyaKumari\\Desktop\\Selenium\\Project\\ComplexLevelTestCases6Febto15Feb\\TestDataSheet.xlsx";
+	String fileName="C:\\Users\\SatyaKumari\\Desktop\\TestDataSheet.xlsx";
 		
 		for(String [] temp : new ApachePOIExcelRead().getExcelContent(fileName)){
 			for(String  tt : temp){
@@ -97,5 +100,5 @@ public class ApachePOIExcelRead {
 			}
 		}
 
-	}
+	}*/
 }

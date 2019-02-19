@@ -38,6 +38,21 @@ public class ELTC_071_AuthorATestPOM {
 		this.loginBtn.click(); 
 	}
 	
+	@FindBy(xpath="//a[contains(text(), 'My courses')]")
+	private WebElement Courses;
+	
+	public void clickcourses()
+	{
+		this.Courses.click();
+	}
+	@FindBy(xpath="//a[contains(text(), 'Selenium_Basics')]")
+	private WebElement Subscribedcourse;
+	
+	public void clickSubscribedcourse()
+	{
+		this.Subscribedcourse.click();
+	}
+	
 	@FindBy(xpath="//img[@title='Tests']")
 	private WebElement testicon;
 	
@@ -59,7 +74,7 @@ public class ELTC_071_AuthorATestPOM {
 	public void sendTestName()
 	{
 		this.TestName.clear();
-		this.TestName.sendKeys("Selenium Basics_02");
+		this.TestName.sendKeys("Online Quiz");
 	}
 	
 	@FindBy(id="advanced_params")
@@ -71,7 +86,7 @@ public class ELTC_071_AuthorATestPOM {
 		
 	}
 	
-	/*@FindBy(xpath="//body[@class='cke_1 cke cke_reset cke_chrome cke_editor_exerciseDescription cke_ltr cke_browser_webkit")
+	@FindBy(xpath="//body[@class='cke_1 cke cke_reset cke_chrome cke_editor_exerciseDescription cke_ltr cke_browser_webkit")
 	private WebElement richtextbox;
 	
 	@FindBy(xpath="//iframe[@class='cke_editable cke_editable_themed cke_contents_ltr cke_show_borders']")
@@ -92,7 +107,7 @@ public class ELTC_071_AuthorATestPOM {
 		
 		
 	}
-	*/
+	
 		
 	@FindBy(name="activate_start_date_check")
 	private WebElement EnableStartTime;
@@ -113,9 +128,4 @@ public class ELTC_071_AuthorATestPOM {
 	}
 	
 	
-	
-	
-
-	
-		
 		}
